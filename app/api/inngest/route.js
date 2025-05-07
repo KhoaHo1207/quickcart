@@ -11,5 +11,5 @@ import {
 // Đăng ký các hàm vào webhook server
 export const { GET, POST, PUT } = serve({
   client: inngest, // client được cấu hình từ inngest
-  functions: [syncUserCreation, syncUserUpdation, syncUserDeletion],
+  functions: [syncUserCreation],
 });
