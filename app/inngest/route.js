@@ -9,4 +9,5 @@ import {
 export const { GET, POST, PUT } = serve({
   client: inngest,
   functions: [syncUserCreation, syncUserUpdation, syncUserDeletion],
+  //Ghi chú nè
 });
