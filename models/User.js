@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { unique } from "next/dist/build/utils";
 
 const userSchema = new mongoose.Schema(
   {
@@ -25,10 +24,12 @@ const userSchema = new mongoose.Schema(
       default: {},
     },
   },
-  { minimize: flase },
-  { timestamps: true }
+  {
+    minimize: false,
+    timestamps: true,
+  }
 );
 
-const User = mongoose.models.User || mongoose.models("User", userSchema);
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
 export default User;
